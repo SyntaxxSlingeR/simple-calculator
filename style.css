@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('photo61.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.calculator-container {
+  text-align: center;
+  background-color: rgba(0, 251, 255, 0.7); 
+  border-radius: 20px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 8px 15px rgb(21, 0, 255);
+  border: 2px solid #000000;
+  transform-style: preserve-3d;
+  animation: calculatorAnimate 2s ease-in-out infinite alternate;
+}
+
+@keyframes calculatorAnimate {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      transform: rotateY(10deg);
+  }
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  animation: logoAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoAnimation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.calculator {
+  margin-top: 25px;
+}
+
+.display {
+  width: 100%;
+  padding: 20px;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-align: right;
+  border: 2px solid #000000; 
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0066cc, #0051ff);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgb(0, 157, 255);
+  animation: glowEffect 1.5s infinite alternate;
+}
+
+
+
+@keyframes glowEffect {
+  0% {
+      box-shadow: 0 0 15px rgb(0, 0, 255);
+  }
+  100% {
+      box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
+  }
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0066cc, #0080ff);
+  border: 2px solid #1f5992;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0051ff, #22fff4);
+  transform: translateY(-8px) rotateX(10deg);
+}
+
+.operator {
+  background: linear-gradient(135deg, #22fff4, #0051ff);
+  color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.operator:hover {
+  background: linear-gradient(135deg, #22fff4, #0051ff);
+}
+
+.btn:active {
+  transform: translateY(0) rotateX(0);
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
