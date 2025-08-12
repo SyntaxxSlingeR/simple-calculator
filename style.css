@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: url('photo01.jpg') no-repeat center center fixed;
+background: url('images/photo01.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -128,4 +128,5 @@ body {
       transform: translateY(0);
   }
 }
+
 
