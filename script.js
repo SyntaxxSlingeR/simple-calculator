@@ -6,9 +6,14 @@ function appendValue(value) {
     display.value = '';
     errorState = false;
   }
-  
+
   const operators = ['+', '-', '*', '/'];
   const lastChar = display.value.slice(-1);
+
+  if (display.value === '' && operators.includes(value) && value !== '-') {
+    return;
+  }
+
   if (operators.includes(value) && operators.includes(lastChar)) {
     display.value = display.value.slice(0, -1) + value;
   } else {
@@ -58,5 +63,12 @@ document.addEventListener('keydown', (e) => {
     clearDisplay();
   }
 });
+
+const clearBtn = document.getElementById('clearBtn');
+if (clearBtn) {
+  clearBtn.type = 'button'; 
+  clearBtn.addEventListener('click', clearDisplay);
+  clearBtn.addEventListener('touchstart', clearDisplay);
+}
 
 
