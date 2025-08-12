@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Math Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="calculator-container">
     <div class="logo">
-      <img src="icon.png" alt="Logo" class="logo-img">
+      <img src="icon.png" alt="Logo" class="logo-img" />
     </div>
     <div class="calculator">
-    <input type="text" id="display" class="display" disabled title="Result display" />
+      <input
+        type="text"
+        id="display"
+        class="display"
+        disabled
+        title="Result display"
+        aria-label="Calculator display"
+      />
+
       <div class="buttons">
-        <button class="btn" onclick="appendValue('7')">7</button>
-        <button class="btn" onclick="appendValue('8')">8</button>
-        <button class="btn" onclick="appendValue('9')">9</button>
-        <button class="btn operator" onclick="appendValue('+')">+</button>
+        <button type="button" class="btn" onclick="appendValue('7')" aria-label="7">7</button>
+        <button type="button" class="btn" onclick="appendValue('8')" aria-label="8">8</button>
+        <button type="button" class="btn" onclick="appendValue('9')" aria-label="9">9</button>
+        <button type="button" class="btn operator" onclick="appendValue('+')" aria-label="Add">+</button>
 
-        <button class="btn" onclick="appendValue('4')">4</button>
-        <button class="btn" onclick="appendValue('5')">5</button>
-        <button class="btn" onclick="appendValue('6')">6</button>
-        <button class="btn operator" onclick="appendValue('-')">-</button>
+        <button type="button" class="btn" onclick="appendValue('4')" aria-label="4">4</button>
+        <button type="button" class="btn" onclick="appendValue('5')" aria-label="5">5</button>
+        <button type="button" class="btn" onclick="appendValue('6')" aria-label="6">6</button>
+        <button type="button" class="btn operator" onclick="appendValue('-')" aria-label="Subtract">-</button>
 
-        <button class="btn" onclick="appendValue('1')">1</button>
-        <button class="btn" onclick="appendValue('2')">2</button>
-        <button class="btn" onclick="appendValue('3')">3</button>
-        <button class="btn operator" onclick="appendValue('*')">*</button>
+        <button type="button" class="btn" onclick="appendValue('1')" aria-label="1">1</button>
+        <button type="button" class="btn" onclick="appendValue('2')" aria-label="2">2</button>
+        <button type="button" class="btn" onclick="appendValue('3')" aria-label="3">3</button>
+        <button type="button" class="btn operator" onclick="appendValue('*')" aria-label="Multiply">*</button>
 
-        <button class="btn" onclick="appendValue('0')">0</button>
-        <button class="btn" onclick="clearDisplay()">C</button>
-        <button class="btn" onclick="calculateResult()">=</button>
-        <button class="btn operator" onclick="appendValue('/')">/</button>
+        <button type="button" class="btn" onclick="appendValue('0')" aria-label="0">0</button>
+        <button
+          type="button"
+          id="clearBtn"
+          class="btn"
+          aria-label="Clear"
+        >
+          C
+        </button>
+        <button type="button" class="btn" onclick="calculateResult()" aria-label="Equals">=</button>
+        <button type="button" class="btn operator" onclick="appendValue('/')" aria-label="Divide">/</button>
       </div>
     </div>
   </div>
@@ -41,6 +56,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
 
